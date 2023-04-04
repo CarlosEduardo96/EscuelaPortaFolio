@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C04D9AED-2B5A-40FC-9B38-695DFFC14943}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EscuelaPortaFolio</RootNamespace>
+    <AssemblyName>EscuelaPortaFolio</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.117.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.117.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Catalaogo\Alumno\ACAlumno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Alumno\ACAlumno.Designer.cs">
+      <DependentUpon>ACAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalaogo\Alumno\IndexAlumno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Alumno\IndexAlumno.Designer.cs">
+      <DependentUpon>IndexAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalaogo\Alumno\VistaAlumno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Alumno\VistaAlumno.Designer.cs">
+      <DependentUpon>VistaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App.Designer.cs">
+      <DependentUpon>App.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalaogo\Materia\ACMateria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Materia\ACMateria.Designer.cs">
+      <DependentUpon>ACMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalaogo\Materia\IndexMateria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Materia\IndexMateria.Designer.cs">
+      <DependentUpon>IndexMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalaogo\Materia\VistaMateria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Materia\VistaMateria.Designer.cs">
+      <DependentUpon>VistaMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalaogo\Unidad\ACUnidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Unidad\ACUnidad.Designer.cs">
+      <DependentUpon>ACUnidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalaogo\Unidad\IndexUnidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Unidad\IndexUnidad.Designer.cs">
+      <DependentUpon>IndexUnidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalaogo\Unidad\VistaUnidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalaogo\Unidad\VistaUnidad.Designer.cs">
+      <DependentUpon>VistaUnidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RutaApp.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="App.resx">
+      <DependentUpon>App.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Alumno\ACAlumno.resx">
+      <DependentUpon>ACAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Alumno\IndexAlumno.resx">
+      <DependentUpon>IndexAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Alumno\VistaAlumno.resx">
+      <DependentUpon>VistaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Materia\ACMateria.resx">
+      <DependentUpon>ACMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Materia\IndexMateria.resx">
+      <DependentUpon>IndexMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Materia\VistaMateria.resx">
+      <DependentUpon>VistaMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Unidad\ACUnidad.resx">
+      <DependentUpon>ACUnidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Unidad\IndexUnidad.resx">
+      <DependentUpon>IndexUnidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalaogo\Unidad\VistaUnidad.resx">
+      <DependentUpon>VistaUnidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="BDLOCAL\escuelaBD.db" />
+    <None Include="BDLOCAL\escuelaBD.sqbpro" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school_FILL1_wght500_GRAD200_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school_FILL1_wght600_GRAD200_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groups_FILL0_wght500_GRAD200_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school_FILL0_wght600_GRAD200_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard_full_FILL0_wght500_GRAD200_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\local_library_FILL0_wght500_GRAD200_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmarks_FILL0_wght500_GRAD200_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignment_add_FILL0_wght500_GRAD200_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Encabezado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BT\BT.csproj">
+      <Project>{E4675C2B-5A95-4D8D-A45F-80BA177A7C44}</Project>
+      <Name>BT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RN\RN.csproj">
+      <Project>{30951460-3a1a-4311-9975-bb5ad96557c2}</Project>
+      <Name>RN</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{728F210C-B56C-4673-9F33-662C69A40151}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
